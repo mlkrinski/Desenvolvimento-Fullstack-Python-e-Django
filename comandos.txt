@@ -1,0 +1,8 @@
+.\.venv\Scripts\activate
+cd .\mysite\
+poetry run python manage.py runserver
+
+
+
+python .\manage.py migrate
+python -m django --version

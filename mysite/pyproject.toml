@@ -1,0 +1,27 @@
+[project]
+name = "desenvolvendo-django"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "mlkrinski",email = "marcelokrinski@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django",
+    "dj-database-url",
+    "psycopg2-binary"
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "mysite.settings"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ipython",
+    "pytest-django"
+]
