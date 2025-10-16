@@ -10,7 +10,8 @@ requires-python = ">=3.12"
 dependencies = [
     "django",
     "dj-database-url",
-    "psycopg2-binary"
+    "psycopg2-binary",
+    "whitenoise[brotli]"
 ]
 
 [tool.pytest.ini_options]
