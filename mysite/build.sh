@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
-set -o errexit
+set -o errexit  # Para o deploy falhar se der erro
 
-pip install poetry -U 
-poetry install --no-root --no-dev
-
-
-python manage.py collectstatic --no-input
-
-python manage.py migrate
+poetry install
+poetry run python manage.py collectstatic --noinput
+poetry run python manage.py migrate
